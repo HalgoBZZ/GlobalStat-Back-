@@ -60,15 +60,15 @@ public class PfeApplication implements CommandLineRunner{
 			responseService.add(r5);		
 		
 	
-	 Module m1=new Module("Accueil");
+	 Module m1=new Module("Accueil",0);
 	 if(moduleService.findOne(m1.getValueModule())==null)
 		 moduleService.add(m1); 
 	 
-	 Module m2=new Module("Débit");
+	 Module m2=new Module("Débit",0);
 	 if(moduleService.findOne(m2.getValueModule())==null)
 		 moduleService.add(m2); 
 	 
-	 Module m3=new Module("Nouveautés");
+	 Module m3=new Module("Nouveautés",0);
 	 if(moduleService.findOne(m3.getValueModule())==null)
 		 moduleService.add(m3); 
 	}

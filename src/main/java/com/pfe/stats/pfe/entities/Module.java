@@ -18,13 +18,25 @@ public class Module {
 	@Field("value")
 	private String valueModule;
 	
+	@Field("nbusers")
+	private int nbusers;
+	
 	@DBRef
 	private List<Question>questions=new ArrayList<Question>();
 	
 	public Module() {}
 
-	public Module(String valueModule) {
+	public Module(String valueModule, int nbusers) {
 		this.valueModule = valueModule;
+		this.nbusers=nbusers;
+	}
+
+	public int getNbusers() {
+		return nbusers;
+	}
+
+	public void setNbusers(int nbusers) {
+		this.nbusers = nbusers;
 	}
 
 	public String getIdModule() {
